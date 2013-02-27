@@ -1,0 +1,59 @@
+body.invent-body {
+  color: #666666;
+  font-size: 18px;
+  padding: 5px;
+}
+
+#left-panel {
+    float: left;
+    height: 100%;
+    left: 90px;
+    position: fixed;
+    top: 50px;
+    width: 120px;
+}
+
+#middle-panel {
+	 /* position:absolute; */
+}
+#right-panel {
+	  bottom:40px;
+	  left:230px;
+	  overflow:hidden;
+	  position:fixed;
+	  right:90px;
+	  top:50px;
+	  border: 1px solid #CCCCCC;
+	  border-radius: 5px 5px 5px 5px;
+	  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3)
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6, p, li, blockquote, td, th, a, caption, em, strong, strike, input, textarea {
+    color: #666666;
+    font-style: normal;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+}
+.slide-out {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-left: 1px solid #999999;
+    left: 0;
+    min-height: 100%;
+    padding: 0 40px;
+    position: absolute;
+    top: 5px;
+    left: 230px;
+    width: 470px;
+    z-index: 10000;
+    display:none;
+}
+.content-fixed {
+			height: 394px;
+			overflow:hidden;
+			position:relative;
+			width:470px;
+		}
