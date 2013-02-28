@@ -1,21 +1,26 @@
 <?php 
+require_once 'classes/invent_logger.php';
+
 class InventDatabase {
   private $username;
   private $password;
   private $db;
   private $mysqli;
+  private $logger;
   
   function __construct($username, $password, $db) {
     $this->username = $username;
     $this->password = $password;
     $this->db = $db;
     $this->connect();
+    $this->logger = new InventLogger();
   }
   
   function connect() {
-    $this->mysqli = new mysqli('localhost', 'root', 'root', $this->db);
+    $this->mysqli = new mysqli('localhost', 'roott', 'root', $this->db);
     if(mysqli_connect_errno()) {
-      //Log Errores heres
+      echo "connect here";
+      $this->logger->invent_log('Could not connection to the database');
     }
   }
   
