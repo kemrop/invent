@@ -8,7 +8,7 @@
   <body class="invent-login-page">
     <div class="login-container">
      <h2> Error</h2>
-       <div> Failed to authenticate you</div>
+       <div> Failed to authenticate you </div>
     </div>
   </body>
 </html>

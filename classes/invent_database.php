@@ -1,5 +1,6 @@
 <?php 
-require_once 'classes/invent_logger.php';
+require_once 'invent_logger.php';
+require_once 'helper.php';
 
 class InventDatabase {
   private $username;
@@ -12,15 +13,14 @@ class InventDatabase {
     $this->username = $username;
     $this->password = $password;
     $this->db = $db;
+    $this->logger = new InventLogger(Helper::$logfile);
     $this->connect();
-    $this->logger = new InventLogger();
   }
   
   function connect() {
-    $this->mysqli = new mysqli('localhost', 'roott', 'root', $this->db);
+    $this->mysqli = new mysqli('localhost', 'root', 'root', $this->db);
     if(mysqli_connect_errno()) {
-      echo "connect here";
-      $this->logger->invent_log('Could not connection to the database');
+      $this->logger->invent_log('Could not connect to the database');
     }
   }
   
